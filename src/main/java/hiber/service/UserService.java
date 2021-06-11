@@ -9,5 +9,5 @@ public interface UserService {
     void add(User user);
     void add(User user, Car car);
     List<User> listUsers();
-    List<Car> listCars(Car car);
+    List<User> listUsers(Car car);
 }

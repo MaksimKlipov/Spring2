@@ -16,9 +16,6 @@ public class UserServiceImp implements UserService {
    @Autowired
    private UserDao userDao;
 
-   @Autowired
-   private CarDao carDao;
-
    @Transactional
    @Override
    public void add(User user) {
@@ -40,7 +37,7 @@ public class UserServiceImp implements UserService {
 
    @Transactional
    @Override
-   public List<Car> listCars(Car car) {
-      return carDao.listCars(car);
+   public List<User> listUsers(Car car) {
+      return userDao.listUsers(car);
    }
 }

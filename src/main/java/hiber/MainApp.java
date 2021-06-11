@@ -25,25 +25,25 @@ public class MainApp {
       userService.add(new User("Mia", "Toretto", "mia@mail.ru"),
               new Car("VAZ", 2107));
 
-      List<User> users = userService.listUsers();
-      for (User user : users) {
+//      List<User> users = userService.listUsers();
+//      for (User user : users) {
+//         System.out.println("Id = "+user.getId());
+//         System.out.println("First Name = "+user.getFirstName());
+//         System.out.println("Last Name = "+user.getLastName());
+//         System.out.println("Email = "+user.getEmail());
+//         System.out.println("Car = "+user.getCar().getModel() + " - " + user.getCar().getSeries());
+//         System.out.println();
+//      }
+
+      Car car = new Car("VAZ", 2107);
+
+      List<User> users2 = userService.listUsers(car);
+      for (User user : users2) {
          System.out.println("Id = "+user.getId());
          System.out.println("First Name = "+user.getFirstName());
          System.out.println("Last Name = "+user.getLastName());
          System.out.println("Email = "+user.getEmail());
          System.out.println("Car = "+user.getCar().getModel() + " - " + user.getCar().getSeries());
-         System.out.println();
-      }
-
-      Car car = new Car("VAZ", 2107);
-
-      List<Car> cars = userService.listCars(car);
-      for (Car c : cars) {
-         System.out.println("Id = "+c.getUser().getId());
-         System.out.println("First Name = "+c.getUser().getFirstName());
-         System.out.println("Last Name = "+c.getUser().getLastName());
-         System.out.println("Email = "+c.getUser().getEmail());
-         System.out.println("Car = "+c.getModel() + " - " + c.getSeries());
          System.out.println();
       }
 
